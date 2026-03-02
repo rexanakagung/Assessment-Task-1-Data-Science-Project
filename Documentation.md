@@ -62,4 +62,41 @@ The system must be simple to navigate and accessible for users with different le
 * Help and Guidance
 * Accessible Error Messages
 * Readable Output
-* Support for All Users
+* Support for All Users  
+# Build Plan 
+#### Project Overview: A Weather app
+***  
+### Phase 1: Project Foundation & Setup 
+#### 1.1 Environment Setup 
+
+Create project structure with subdirectories:
+* data/ - cached API responses and saved datasets
+* sessions/ - saved session data
+* charts/ - exported chart images
+* src/ - main application code 
+
+Create requirements.txt with dependencies:  
+* pandas
+* requests (for API calls)
+* matplotlib (for charting)
+* numpy (for data manipulation)
+* json (built-in, for data handling)
+* Create .gitignore for sensitive data/cache files 
+
+
+ #### 1.2 API Selection & Testing 
+ 
+ Research and select a free, beginner-friendly API: 
+
+* Requirements: No authentication needed (or simple key), returns JSON, has good documentation
+* Test API connectivity and response structure
+* Document API endpoints and response format
+* Create sample API response files for offline testing 
+ 
+ ### Phase 2: Core Application Architecture  
+ #### 1. Main Application Structure 
+ Create main.py - entry point with menu system
+Design application flow:
+* Main menu with options (Load Session (nice to have), New Session, Exit)
+* Session management system (nice to have) 
+* Implement a basic module selector
