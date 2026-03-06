@@ -1,6 +1,6 @@
 # Data Science Application (Weather App) 
 What is your project about?  
-It is a weather app
+My project is a weather app. It will include an API that receives data from a chosen API to display weather forcasts which includes visualisations such as charts and graphs.
 ## Functional Requirements 
 (What the system should do)
 
@@ -99,4 +99,40 @@ Create requirements.txt with dependencies:
 Design application flow:
 * Main menu with options (Load Session (nice to have), New Session, Exit)
 * Session management system (nice to have) 
-* Implement a basic module selector
+* Implement a basic module selector 
+
+#### 2. API Handler Module (api_handler.py)
+* Create function to fetch data from selected API
+* Implement error handling for network issues 
+* Add data cahing to avoid repeated API calls
+* Create function to display raw API response
+* Add timestamp tracking for data freshness 
+  
+#### 3. Date Cleaning Module (data_cleaner.py) 
+* Create functions to:
+    * Remove/ handing missing values
+    * Remove duplicates
+    * Convert data types
+    * Rename columns
+    * Standardize formatting 
+#### 4. Data Filtering Module (date_filter.py) 
+* Create functions to: 
+    * filter by colums value
+    * Filter by range numeric
+    * Filter by string pattern
+
+#### 5. Data Sorting Module (data_sort.py) 
+* Create functions to:   
+    * Sort by single column 
+    * Sort by multiple columns 
+    * sort ascending/descending
+    * display results with statistics
+     
+#### 6. Visuallisations Module (visualisations.py)
+* Create functions to:
+    * Line charts 
+    * Histograms
+      
+       
+#### 7. File I/O Module (file_manager.py)
+* Implement TXT export function
