@@ -31,8 +31,6 @@ Installations
 Once all of this is done, run the main script: python main.py      
 You should now be able to enter a city name and receive real‑time weather information. 
 
-This is a commit test
-
 
 
  
