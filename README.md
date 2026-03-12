@@ -1,6 +1,6 @@
 # DATA SCIENCE APLICATION PREMLIMINARY SOFTWARE ENGINEERING (2026)
 #### Description 
-This Data Science Aplication acts as a weather app displaying data in visualisations from efficiently extracting informtion from external API's. It is a user-friendly weather app that displays real time forcasts and weather conditions. It helps user's quickly navigate their local forcasts and enables them to plan confidentally ahead of the day. 
+This project is a data‑driven weather application that retrieves real‑time weather information from an external API and presents it in a clear, user‑friendly format. It includes visualisations, error handling, and simple interaction through the terminal. The goal is to help users quickly understand local weather conditions and plan their day with confidence.
  
  #### Features 
  * Extracts data from API 
@@ -13,7 +13,7 @@ This Data Science Aplication acts as a weather app displaying data in visualisat
 * Python 3.x 
 * Requests (for API calls)
 * JSON (for parsing API responses) 
-* weatherapi.com (API that is being used)
+* WeatherAPI.com (API that is being used)
 
 #### Getting Started 
  Before you begin make sure you have
@@ -21,15 +21,25 @@ This Data Science Aplication acts as a weather app displaying data in visualisat
 * A terminal or command prompt
 * pip for installing dependencies
 
-Installations
+#### Installations
 1. Clone the resporitory: https://github.com/rexanakagung/Assessment-Task-1-Data-Science-Project
 2. Install dependencies: pip install -r requirements.txt 
 3. Install API Key 
  
-#### Running the App
-  
+#### Running the App  
 Once all of this is done, run the main script: python main.py      
-You should now be able to enter a city name and receive real‑time weather information. 
+You should now be able to enter a city name and receive real‑time weather information.  
+Enter a city name when prompted, and the app will display: 
+* Temparature
+* Weather conditions
+* Humidity 
+* Additional Visualisations 
+ 
+#### Project Structure 
+ 
+#### Author 
+Rex Anak Agung (2026) 
+Github: https://github.com/rexanakagung
 
 
 
