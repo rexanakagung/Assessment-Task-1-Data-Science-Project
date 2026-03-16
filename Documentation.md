@@ -136,3 +136,7 @@ Design application flow:
        
 #### 7. File I/O Module (file_manager.py)
 * Implement TXT export function
+
+# Design  
+Flowchart 
+https://excalidraw.com/#json=HluweEP8VPTabogF5HYXH,aPXsb7fV9mXIa9o2LfRQgg
