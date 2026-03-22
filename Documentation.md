@@ -139,4 +139,7 @@ Design application flow:
 
 # Design  
 Flowchart 
-https://excalidraw.com/#json=HluweEP8VPTabogF5HYXH,aPXsb7fV9mXIa9o2LfRQgg
+https://excalidraw.com/#json=HluweEP8VPTabogF5HYXH,aPXsb7fV9mXIa9o2LfRQgg 
+
+Structure chart 
+https://excalidraw.com/#json=KlaS-WNRmtD-OxN4DCY61,gczbtztE4MsUn3HTL8VvrQ
