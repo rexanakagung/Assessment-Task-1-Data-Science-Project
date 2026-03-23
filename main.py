@@ -1,3 +1,28 @@
+def settings_menu():
+    while True:
+        print("\nSettings Menu")
+        print("1. Change Timezone")
+        print("2. Erase Favourited City's")
+        print("3. Erase Saved City's")
+        print("4. Unit Of Measurements")
+        print("5. Back To Main Menu")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            print("Changing timezone...")  # Replace with real function later
+        elif choice == "2":
+            print("Erasing favourited cities...")  # Replace with real function later
+        elif choice == "3":
+            print("Erasing saved cities...")  # Replace with real function later
+        elif choice == "4":
+            print("Changing units...")  # Replace with real function later
+        elif choice == "5":
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
 def main():
     while True:
         print("\nWeather App Menu:")
@@ -10,23 +35,24 @@ def main():
 
         if choice == "1":
             name = input("Enter Country followed by city: ")
-            print(f"Searching for {name}'s details...") #Replace with function later
+            print(f"Searching for {name}'s details...")  # Replace with function later
+
         elif choice == "2":
-            print(f"Showing saved city's...") #Replace with function later
+            print("Showing saved city's...")  # Replace with function later
+
         elif choice == "3":
-            print(f"Showing Favourited City's...") #Replace with function later
+            print("Showing favourited city's...")  # Replace with function later
+
         elif choice == "4":
-            print(f"\nSettings Menu") #Replace with function later 
-            print("1. Change Timezone")
-            print("2. Erase Favourited City's")
-            print("3. Erase Saved City's")
-            print("4. Unit Of measurements")
-            print("5. Back To Main Menu")
+            settings_menu()  # Now opens the submenu properly
+
         elif choice == "5":
             print("Exiting Weather App.")
             break
+
         else:
             print("Invalid choice. Please try again.")
+
 
 if __name__ == "__main__":
     main()
