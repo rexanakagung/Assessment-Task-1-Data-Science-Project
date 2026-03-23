@@ -16,7 +16,12 @@ def main():
         elif choice == "3":
             print(f"Showing Favourited City's...") #Replace with function later
         elif choice == "4":
-            print(f"\nSettings Menu") #Replace with function later
+            print(f"\nSettings Menu") #Replace with function later 
+            print("1. Change Timezone")
+            print("2. Erase Favourited City's")
+            print("3. Erase Saved City's")
+            print("4. Unit Of measurements")
+            print("5. Back To Main Menu")
         elif choice == "5":
             print("Exiting Weather App.")
             break
