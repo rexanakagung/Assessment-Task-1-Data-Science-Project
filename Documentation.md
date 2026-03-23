@@ -145,4 +145,4 @@ Structure chart
 https://excalidraw.com/#json=KlaS-WNRmtD-OxN4DCY61,gczbtztE4MsUn3HTL8VvrQ 
 
 Gantt Chart 
-https://excalidraw.com/#json=fBHO7Z1lraHpv1YvtitYW,ePF08zidX7edy01upHZbbg
+https://docs.google.com/spreadsheets/d/1RGyaAHpXh_0wwzc8tRun7XxMQPgwb2P5gP19mIzfU8U/edit?usp=sharing
