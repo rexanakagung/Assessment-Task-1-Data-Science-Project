@@ -36,19 +36,12 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            name = input("Enter country or city: ")
+            name = input("Enter city: ")
             print(f"Searching for {name}'s details...")
             city_info = get_city_info(name)
             if city_info:
-                loc = city_info.get("location", {})
-                curr = city_info.get("current", {})
-                print("--- City Weather ---")
-                print(f"Name: {loc.get('name', 'N/A')}")
-                print(f"Region: {loc.get('region', 'N/A')}")
-                print(f"Country: {loc.get('country', 'N/A')}")
-                print(f"Temperature: {curr.get('temp_c', 'N/A')} °C / {curr.get('temp_f', 'N/A')} °F")
-                print(f"Condition: {curr.get('condition', {}).get('text', 'N/A')}")
-                print("--------------------")
+                print(f"{city_info['location']['name']}")
+                print(f"{city_info['location']['country']}")
 
         elif choice == "2":
             print("Showing saved city's...")  # Replace with function later
