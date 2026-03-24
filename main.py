@@ -72,18 +72,24 @@ def main():
                 gust_mph = (f"Gust speed: {city_info['current']['gust_mph']} mph")
                 gust_kph = (f"Gust speed: {city_info['current']['gust_kph']} kph")
 
-            print("-------------------City Info--------------------")
+            print("-------------------CITY INFO--------------------")
+            print("TODAY'S WEATHER")
             print(cit)
             print(cou)
-            print(lat)
-            print(lon)
+            print(cel)
+            print(uv) 
+            print(feelslikec)
             print(localtime)
             print(timezone)
             print(humidity) 
             print("-------------------------------------------------")
             choice1 = input ("Type 'd' to see further information, or type 'S' to save, or 'f' to favourite: ")
             if choice1 == 'd':
-                print ("test")
+                print ("loading further details...") 
+                print ("-------------------FURTHER DETAILS--------------------")
+                print ("------------------------------------------------------")
+                choice2 = input ("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
+            
 
 
         elif choice == "2":
