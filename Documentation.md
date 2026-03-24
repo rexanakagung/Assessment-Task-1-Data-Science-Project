@@ -1,6 +1,9 @@
 # Data Science Application (Weather App) 
 What is your project about?  
-My project is a weather app. It will include an API that receives data from a chosen API to display weather forcasts which includes visualisations such as charts and graphs.
+My project is a weather application that displays real time weather data with the ability to save sessions and display reults with visualisations.
+ 
+## Sucess Criteria 
+My program should be able to retreive real time weather data from my specific API and display the results with accurate visualisations. It should have a working menu system having saved sessions and the ability to change unit of measurements (e.g celcius).
 ## Functional Requirements 
 (What the system should do)
 

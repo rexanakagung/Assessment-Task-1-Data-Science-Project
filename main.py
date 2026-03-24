@@ -44,10 +44,12 @@ def main():
             city_info = get_city_info(name)
             if city_info:
                 cit = (f"City: {city_info['location']['name']}")
-                cou =(f"Country: {city_info['location']['country']}") 
+                cou = (f"Country: {city_info['location']['country']}")
+                lat = (f"Latitude: {city_info['location']['lat']}")
             
             print(cit)
             print(cou)
+            print(lat)
 
         elif choice == "2":
             print("Showing saved city's...")  # Replace with function later
