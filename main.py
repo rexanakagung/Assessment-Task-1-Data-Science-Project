@@ -1,3 +1,6 @@
+print("Welcome to the Weather App!")
+input("Enter any letter to start: ")
+
 def settings_menu():
     while True:
         print("\nSettings Menu")
@@ -40,8 +43,11 @@ def main():
             print(f"Searching for {name}'s details...")
             city_info = get_city_info(name)
             if city_info:
-                print(f"{city_info['location']['name']}")
-                print(f"{city_info['location']['country']}")
+                cit = (f"City: {city_info['location']['name']}")
+                cou =(f"Country: {city_info['location']['country']}") 
+            
+            print(cit)
+            print(cou)
 
         elif choice == "2":
             print("Showing saved city's...")  # Replace with function later
