@@ -72,13 +72,15 @@ def main():
                 gust_mph = (f"Gust speed: {city_info['current']['gust_mph']} mph")
                 gust_kph = (f"Gust speed: {city_info['current']['gust_kph']} kph")
 
+            print("-------------------City Info--------------------")
             print(cit)
             print(cou)
             print(lat)
             print(lon)
             print(localtime)
             print(timezone)
-            print(humidity)
+            print(humidity) 
+            print("-------------------------------------------------")
 
 
         elif choice == "2":
