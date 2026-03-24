@@ -37,7 +37,7 @@ Enter a city name when prompted, and the app will display:
  
 #### 🏛️ Project Structure 
   
-#### 📋 License 
+#### 📋 LICENSE
 
 #### 📕 Author: Rex Anak Agung (2026) 
 Github: https://github.com/rexanakagung
