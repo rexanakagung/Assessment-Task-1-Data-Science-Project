@@ -5,6 +5,8 @@ api_key = "6b2b2b28d67b4bd892b233321262303"
 # Base URL for WeatherAPI
 base_url = "http://api.weatherapi.com/v1"
 
+city_name = input ("Enter City Name: ")
+
 def fetch_weather(city_name):
     """
     Fetches the current weather data for a given city using WeatherAPI.
