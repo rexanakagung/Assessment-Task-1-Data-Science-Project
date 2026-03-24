@@ -10,9 +10,15 @@ def get_city_info(name):
     print(response)
     
     if response.status_code == 200: 
-        print("Data retrieved!") 
+        city_data = response.json() 
+        return city_data
     else: 
         print(f"Failed to retrieve data {response.status_code}")
  
-city_name = "London" 
-get_city_info(city_name)
+city_name = input ("Enter City: ") 
+city_info = get_city_info(city_name) 
+ 
+if city_info:
+     print(city_info["location"]["name"])
+     print(city_info["location"]["country"]) 
+     print(city_info["location"]["localtime"])
