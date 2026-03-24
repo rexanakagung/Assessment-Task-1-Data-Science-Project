@@ -19,6 +19,10 @@ city_name = input ("Enter City: ")
 city_info = get_city_info(city_name) 
  
 if city_info:
-     print(city_info["location"]["name"])
-     print(city_info["location"]["country"]) 
-     print(city_info["location"]["localtime"])
+     location = city_info["location"]["name"]
+     country = city_info["location"]["country"]
+     localtime = city_info["location"]["localtime"]  
+ 
+print(f"City: {location}")
+print(f"Country: {country}")
+print(f"Local Time: {localtime}")
