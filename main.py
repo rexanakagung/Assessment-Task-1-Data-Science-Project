@@ -81,8 +81,7 @@ def main():
             print(timezone)
             print(humidity) 
             print("-------------------------------------------------")
-            choice1 = input ("Type 'details' to see further information")
-            choice2 = input ("Type S to save city, Type F to favoutite city")
+            choice1 = input ("Type 'details' to see further information, or type S to save, or f to favourite")
 
 
         elif choice == "2":
