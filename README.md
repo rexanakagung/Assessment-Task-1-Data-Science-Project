@@ -1,4 +1,4 @@
-# DATA SCIENCE APLICATION PREMLIMINARY SOFTWARE ENGINEERING (2026)
+# 🌨️ Weather Application
 #### Description 
 This project is a data‑driven weather application that retrieves real‑time weather information from an external API and presents it in a clear, user‑friendly format. It includes visualisations, error handling, and simple interaction through the terminal. The goal is to help users quickly understand local weather conditions and plan their day with confidence.
  
