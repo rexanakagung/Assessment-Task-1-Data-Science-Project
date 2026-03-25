@@ -180,6 +180,8 @@ def main():
                     print("-" * 70)
 
             choice2 = input("Type 'V' to see graphs or press Enter to continue: ")
+            if choice2.lower() == 'v':
+                print("Showing graphs...")  # Replace with graph function later
             
 
 
