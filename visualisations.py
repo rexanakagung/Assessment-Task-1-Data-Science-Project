@@ -1,7 +1,4 @@
-import matplotlib.pyplot as plt
-
-x = [1, 2, 3, 4, 5]
-y = [2, 3, 5, 7, 11]
-
-plt.plot(x, y)
-plt.show()
+def plot_temperature(city_info):
+    forecast_days = city_info['forecast']['forecast_days']
+    days = [day['day']['maxtemp_c']for day in forecast_days]
+    min_temps = [day['day']['mintemp_c'] for day in forecast_days]
