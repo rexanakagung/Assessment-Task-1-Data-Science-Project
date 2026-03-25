@@ -140,22 +140,46 @@ def main():
             print("-" * 70)
             print("       🌡️  CURRENT CONDITIONS")
             print("-" * 70)
-            print(f"     💨 Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}    ☀️: Humidity {city_info['current']['humidity']}%")
-            print(f"     👁️  Visibility:      {city_info['current']['vis_km']} km          🌧️: Precipitation {city_info['current']['precip_mm']} mm")                                        
-            print(f"     🌞 UV Index:        {city_info['current']['uv']}          🔨: Pressure {city_info['current']['pressure_mb']} mb")
-            print(f"     🧊 Dew Point:       {city_info['current']['dewpoint_c']}°C          💨: Wind gust {city_info['current']['gust_kph']} kph")
+            print(f"     💨 Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}")
+            print(f"     ☀️ Humidity:        {city_info['current']['humidity']}%")
+            print(f"     👁️ Visibility:      {city_info['current']['vis_km']} km")
+            print(f"     🌧️ Precipitation:   {city_info['current']['precip_mm']} mm")
+            print(f"     🌞 UV Index:        {city_info['current']['uv']}")
+            print(f"     🔨 Pressure:        {city_info['current']['pressure_mb']} mb")
+            print(f"     🧊 Dew Point:       {city_info['current']['dewpoint_c']}°C")
+            print(f"     💨 Wind Gust:       {city_info['current']['gust_kph']} kph")
             print("-" * 70)
-            choice1 = input ("Type the day (e.g., 'Thursday') to see further information of day choice, or type 'S' to save, or 'f' to favourite city: ")
+
             days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-            
+            choice1 = ""
+            while choice1 not in days_of_week:
+                choice1 = input("Type the day (Monday-Sunday) to see details, or 'exit' to return: ")
+                if choice1 == 'exit':
+                    break
+                if choice1 not in days_of_week:
+                    print("Invalid day. Please type a valid day.")
+
             if choice1 in days_of_week:
-                print(f"loading {choice1} details...")
-            else:
-                print("Invalid choice")
-            print(f"---------------------------------------")
-            print(f"{choice1}'s details")
-            print("------------------------------------------------------")
-            choice2 = input("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
+                # find forecast entry for selected day
+                selected = None
+                for day in city_info['forecast']['forecastday']:
+                    import datetime
+                    date_obj = datetime.datetime.strptime(day['date'], '%Y-%m-%d')
+                    if date_obj.strftime('%A') == choice1:
+                        selected = day['day']
+                        break
+
+                if selected:
+                    print("-" * 40)
+                    print(f"Details for {choice1}:")
+                    print(f"  High: {selected['maxtemp_c']}°C")
+                    print(f"  Low : {selected['mintemp_c']}°C")
+                    print(f"  Condition: {selected['condition']['text']}")
+                    print(f"  Rain chance: {selected.get('daily_chance_of_rain', 0)}%")
+                    print(f"  Humidity: {selected.get('avghumidity', 'N/A')}%")
+                    print("-" * 40)
+
+            choice2 = input("Type 'V' to see graphs or press Enter to continue: ")
             
 
 
