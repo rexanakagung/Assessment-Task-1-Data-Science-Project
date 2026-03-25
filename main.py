@@ -106,7 +106,36 @@ def main():
             print(f"     🌍 {city_info['location']['name']}, {city_info['location']['country']}") 
             print(f"     ⌛️ {city_info['location']['localtime']}")
             print("=" * 50)
-            print("")
+            
+            # Display forecast days with proper alignment
+            import datetime
+            if 'forecast' in city_info and 'forecastday' in city_info['forecast']:
+                
+                for i, day in enumerate(city_info['forecast']['forecastday'][:7]):
+                    # Parse the date and get day name
+                    date_obj = datetime.datetime.strptime(day['date'], '%Y-%m-%d')
+                    
+                    # Check if this is today
+                    today = datetime.datetime.now().date()
+                    forecast_date = date_obj.date()
+                    
+                    if forecast_date == today:
+                        day_name = "Today"
+                    else:
+                        day_name = date_obj.strftime('%A')  # Full day name like "Monday"
+                    
+                    high_temp = int(day['day']['maxtemp_c'])
+                    low_temp = int(day['day']['mintemp_c'])
+                    condition = day['day']['condition']['text']
+                    icon = weather_icons.get(condition, '🌤️')
+                    rain_chance = day['day'].get('daily_chance_of_rain', 0)
+                    
+                    # Format with proper alignment
+                    print(f"     {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition} ({rain_chance}% rain)")
+            else:
+                print("       Today")
+                print("       Today")
+            
             print(cit)
             print(cou)
             print(cel)

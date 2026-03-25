@@ -5,7 +5,7 @@ api_key = "6b2b2b28d67b4bd892b233321262303"
 base_url = "http://api.weatherapi.com/v1" 
   
 def get_city_info(name):
-    url = f"{base_url}/current.json?key={api_key}&q={name}&aqi=no"
+    url = f"{base_url}/forecast.json?key={api_key}&q={name}&days=7&aqi=no"
     response = requests.get(url)
     print(response)
 
