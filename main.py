@@ -153,7 +153,7 @@ def main():
             days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
             choice1 = ""
             while choice1 not in days_of_week:
-                choice1 = input("Type the day (Monday-Sunday) to see details, or 'exit' to return: ")
+                choice1 = input("Type days from (Monday-Sunday) to see details, 's' to save, 'f' to favourite, or 'exit' to return: ")
                 if choice1 == 'exit':
                     break
                 if choice1 not in days_of_week:
@@ -170,14 +170,14 @@ def main():
                         break
 
                 if selected:
-                    print("-" * 40)
+                    print("-" * 70)
                     print(f"Details for {choice1}:")
-                    print(f"  High: {selected['maxtemp_c']}°C")
-                    print(f"  Low : {selected['mintemp_c']}°C")
+                    print(f"  Max Temp: {selected['maxtemp_c']}°C")
+                    print(f"  Min Temp: {selected['mintemp_c']}°C")
                     print(f"  Condition: {selected['condition']['text']}")
                     print(f"  Rain chance: {selected.get('daily_chance_of_rain', 0)}%")
                     print(f"  Humidity: {selected.get('avghumidity', 'N/A')}%")
-                    print("-" * 40)
+                    print("-" * 70)
 
             choice2 = input("Type 'V' to see graphs or press Enter to continue: ")
             
