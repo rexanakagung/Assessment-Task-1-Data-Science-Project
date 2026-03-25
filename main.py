@@ -140,14 +140,26 @@ def main():
             print("-" * 70)
             print("       🌡️  CURRENT CONDITIONS")
             print("-" * 70)
-            print(f"     💨 Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}    ☀️ Humidity {city_info['current']['humidity']}%")
-            print(f"     👁️  Visibility:      {city_info['current']['vis_km']} km          🌧️ Precipitation {city_info['current']['precip_mm']} mm")                                        
-            print(f"     🌞 UV Index:        {city_info['current']['uv']}                  🔨 Pressure {city_info['current']['pressure_mb']} mb")
-            print(f"     🧊 Dew Point:       {city_info['current']['dewpoint_c']}°C        💨 Wind gust {city_info['current']['gust_kph']} kph")
+            print(f"     💨 Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}    ☀️: Humidity {city_info['current']['humidity']}%")
+            print(f"     👁️  Visibility:      {city_info['current']['vis_km']} km          🌧️: Precipitation {city_info['current']['precip_mm']} mm")                                        
+            print(f"     🌞 UV Index:        {city_info['current']['uv']}          🔨: Pressure {city_info['current']['pressure_mb']} mb")
+            print(f"     🧊 Dew Point:       {city_info['current']['dewpoint_c']}°C          💨: Wind gust {city_info['current']['gust_kph']} kph")
             print("-" * 70)
             choice1 = input ("Type the day (e.g., 'Thursday') to see further information of day choice, or type 'S' to save, or 'f' to favourite city: ")
-            if choice1 == 'd':
-                print ("loading further details...") 
+            if choice1 == 'Monday':
+                print ("loading Monday details...")
+            if choice1 == 'Tuesday':
+                print ("loading Tuesday details...")
+            if choice1 == 'Wednesday':
+                print ("loading Wednesday details...")
+            if choice1 == 'Thursday':
+                print ("loading Thursday details...")
+            if choice1 == 'Friday':
+                print ("loading Friday details...")
+            if choice1 == 'Saturday':
+                print ("loading Saturday details...")
+            if choice1 == 'Sunday':
+                print ("loading Sunday details...") 
                 print ("-------------------FURTHER DETAILS--------------------")
                 print ("------------------------------------------------------")
                 choice2 = input ("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
