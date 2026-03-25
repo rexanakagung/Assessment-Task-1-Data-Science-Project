@@ -160,9 +160,12 @@ def main():
                 print ("loading Saturday details...")
             if choice1 == 'Sunday':
                 print ("loading Sunday details...") 
-                print ("-------------------FURTHER DETAILS--------------------")
-                print ("------------------------------------------------------")
-                choice2 = input ("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
+            else:
+                print ("Invalid choice")
+            print (f"---------------------------------------")
+            print (f"{choice1}'s details")
+            print ("------------------------------------------------------")
+            choice2 = input ("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
             
 
 
