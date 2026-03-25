@@ -100,12 +100,12 @@ def main():
                 gust_mph = (f"Gust speed: {city_info['current']['gust_mph']} mph")
                 gust_kph = (f"Gust speed: {city_info['current']['gust_kph']} kph")
 
-            print("-" * 50)
+            print("-" * 70)
             print("     📅 7-DAY FORECAST")
-            print("-" * 50)
+            print("-" * 70)
             print(f"     🌍 {city_info['location']['name']}, {city_info['location']['country']}") 
             print(f"     ⌛️ {city_info['location']['localtime']}")
-            print("=" * 50)
+            print("=" * 70)
             
             # Display forecast days with proper alignment
             import datetime
@@ -131,15 +131,15 @@ def main():
                     rain_chance = day['day'].get('daily_chance_of_rain', 0)
                     
                     # Format with proper alignment
-                    print(f"     {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition} ({rain_chance}% rain)") 
+                    print(f"     {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition}       ({rain_chance}% rain)") 
             else:
                 print("       Today")
                 print("       Today")
             
            
-            print("-" * 50)
+            print("-" * 70)
             choice1 = input ("Type 'd' to see further information, or type 'S' to save, or 'f' to favourite: ")
-            print("-" * 50)
+            print("-" * 70)
             if choice1 == 'd':
                 print ("loading further details...") 
                 print ("-------------------FURTHER DETAILS--------------------")
