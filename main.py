@@ -1,5 +1,33 @@
 print("Welcome to the Weather App!")
-input("Enter any letter to start: ")
+input("Enter any letter to start: ") 
+ 
+weather_icons = {
+    "Sunny": "☀️",
+    "Clear": "☀️",
+    "Partly cloudy": "⛅",
+    "Cloudy": "☁️",
+    "Overcast": "☁️",
+    "Mist": "🌫️",
+    "Patchy rain possible": "🌦️",
+    "Patchy snow possible": "🌨️",
+    "Patchy sleet possible": "🌨️",
+    "Patchy freezing drizzle possible": "🌧️",
+    "Thundery outbreaks possible": "⛈️",
+    "Blowing snow": "🌨️",
+    "Blizzard": "🌨️",
+    "Fog": "🌫️",
+    "Freezing fog": "🌫️",
+    "Patchy light drizzle": "🌦️",
+    "Light drizzle": "🌦️",
+    "Freezing drizzle": "🌧️",
+    "Heavy freezing drizzle": "🌧️",
+    "Patchy light rain": "🌦️",
+    "Light rain": "🌦️",
+    "Moderate rain": "🌦️",
+    "Heavy rain": "🌧️",
+    "thunderstorm": "⛈️",
+    # Add more conditions as needed
+}
 
 def settings_menu():
     while True:
