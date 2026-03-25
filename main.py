@@ -138,12 +138,12 @@ def main():
             
            
             print("-" * 70)
-            print(".    🌡️ Current Conditions")
+            print("       🌡️  CURRENT CONDITIONS")
             print("-" * 70)
-            print(f"    💨 Wind Speed         {city_info['current']['wind_kph']} km/h [Direction: {city_info['current']['wind_dir']}]")
-            print(f"    👁️ Visibility         {city_info['current']['vis_km']} km")
-            print(f"    🌞 UV Index           {city_info['current']['uv']}")
-            print(f"    🌡️ Dew Point          {city_info['current']['dewpoint_c']}°C / {city_info['current']['dewpoint_f']}°F")
+            print(f"     💨   Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}")
+            print(f"     👁️   Visibility:      {city_info['current']['vis_km']} km")
+            print(f"     🌞   UV Index:        {city_info['current']['uv']}")
+            print(f"     🧊   Dew Point:       {city_info['current']['dewpoint_c']}°C")
             choice1 = input ("Type 'd' to see further information, or type 'S' to save, or 'f' to favourite: ")
             if choice1 == 'd':
                 print ("loading further details...") 
