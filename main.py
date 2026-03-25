@@ -195,10 +195,22 @@ def main():
                     print(f"    Chance of Sleet: {selected.get('daily_chance_of_sleet', 0)}%")
                     print("-" * 70)
 
-            choice2 = input("Type 'V' to see graphs or press Enter to continue: ")
-            if choice2.lower() == 'v':
-                print("Showing graphs...")  # Replace with graph function later
-            
+            choice2 = input("Type 'g' to see graphs or press Enter to continue: ")
+            if choice2.lower() == 'g':
+                print("\nGraphs Menu")
+                print("Hourly/Daily Temperature")
+                print("Hourly/Daily UV Index")  
+                print("Wind Speed and Gust Chart") 
+
+                choice3 = input("Choose a graph to display (1-3) or press Enter to return: ") 
+                if choice3 == "1":
+                    print("Displaying temperature graph...")  # Replace with function later
+                elif choice3 == "2":
+                    print("Displaying UV index graph...")  # Replace with function later
+                elif choice3 == "3":
+                    print("Displaying wind speed and gust chart...")  # Replace with function later
+                else:
+                    print("Invalid choice. Returning to main menu.")
 
 
         elif choice == "2":
