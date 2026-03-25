@@ -131,15 +131,17 @@ def main():
                     rain_chance = day['day'].get('daily_chance_of_rain', 0)
                     
                     # Format with proper alignment
-                    print(f"     {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition}       ({rain_chance}% rain)") 
+                    print(f"       {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition:<20} ({rain_chance}% rain)") 
             else:
                 print("       Today")
                 print("       Today")
             
            
             print("-" * 70)
-            choice1 = input ("Type 'd' to see further information, or type 'S' to save, or 'f' to favourite: ")
+            print(".    🌡️Current Conditions")
             print("-" * 70)
+            print(f"     💨Wind Speed: {city_info['current']['wind_kph']} kph")
+            choice1 = input ("Type 'd' to see further information, or type 'S' to save, or 'f' to favourite: ")
             if choice1 == 'd':
                 print ("loading further details...") 
                 print ("-------------------FURTHER DETAILS--------------------")
