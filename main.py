@@ -176,7 +176,6 @@ def main():
                     print(f"    Max Temp: {selected['maxtemp_c']}°C")
                     print(f"    Min Temp: {selected['mintemp_c']}°C")
                     print(f"    Avg Temp: {selected['avgtemp_c']}°C")
-                    print(f"    Feels Like: {selected['feelslike_c']}°C")
                     print(f"    Condition: {selected['condition']['text']}")
                     print(f"    Rain chance: {selected.get('daily_chance_of_rain', 0)}%")
                     print(f"    Humidity: {selected.get('avghumidity', 'N/A')}%")
