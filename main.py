@@ -146,26 +146,16 @@ def main():
             print(f"     🧊 Dew Point:       {city_info['current']['dewpoint_c']}°C          💨: Wind gust {city_info['current']['gust_kph']} kph")
             print("-" * 70)
             choice1 = input ("Type the day (e.g., 'Thursday') to see further information of day choice, or type 'S' to save, or 'f' to favourite city: ")
-            if choice1 == 'Monday':
-                print ("loading Monday details...")
-            if choice1 == 'Tuesday':
-                print ("loading Tuesday details...")
-            if choice1 == 'Wednesday':
-                print ("loading Wednesday details...")
-            if choice1 == 'Thursday':
-                print ("loading Thursday details...")
-            if choice1 == 'Friday':
-                print ("loading Friday details...")
-            if choice1 == 'Saturday':
-                print ("loading Saturday details...")
-            if choice1 == 'Sunday':
-                print ("loading Sunday details...") 
+            days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            
+            if choice1 in days_of_week:
+                print(f"loading {choice1} details...")
             else:
-                print ("Invalid choice")
-            print (f"---------------------------------------")
-            print (f"{choice1}'s details")
-            print ("------------------------------------------------------")
-            choice2 = input ("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
+                print("Invalid choice")
+            print(f"---------------------------------------")
+            print(f"{choice1}'s details")
+            print("------------------------------------------------------")
+            choice2 = input("Type 'V' followed by letter of day to see graphs. Type 'day' to see further details")
             
 
 
