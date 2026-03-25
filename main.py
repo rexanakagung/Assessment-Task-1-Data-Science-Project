@@ -100,7 +100,8 @@ def main():
                 gust_mph = (f"Gust speed: {city_info['current']['gust_mph']} mph")
                 gust_kph = (f"Gust speed: {city_info['current']['gust_kph']} kph")
 
-            print("-------------------CITY INFO--------------------")
+            print("---------------------------------------")
+            print("----------------------------------------")
             print("TODAY'S WEATHER")
             print(cit)
             print(cou)
