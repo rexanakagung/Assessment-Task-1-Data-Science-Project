@@ -132,7 +132,6 @@ def main():
                     
                     # Format with proper alignment
                     print(f"     {day_name:<12} {icon:<2} {high_temp}°/{low_temp}°  • {condition} ({rain_chance}% rain)") 
-                    print("-" * 50)
             else:
                 print("       Today")
                 print("       Today")
