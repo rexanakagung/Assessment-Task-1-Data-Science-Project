@@ -91,21 +91,15 @@ def show_saved_cities_menu():
 def settings_menu():
     while True:
         print("\nSettings Menu")
-        print("1. Change Timezone")
-        print("2. Erase Saved Cities")
-        print("3. Unit Of Measurements")
-        print("4. Back To Main Menu")
+        print("1. Erase Saved Cities")
+        print("2. Back To Main Menu")
 
         choice = input("Choose an option: ")
 
         if choice == "1":
-            print("Changing timezone...")  # Replace with real function later
-        elif choice == "2":
             save_saved_cities([])
             print("Saved cities erased.")
-        elif choice == "3":
-            print("Changing units...")  # Replace with real function later
-        elif choice == "4":
+        elif choice == "2":
             break
         else:
             print("Invalid choice. Please try again.")
