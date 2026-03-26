@@ -69,6 +69,7 @@ def main():
 
         if choice == "1":
             while True:
+                print("")
                 name = input("Enter city: ")
                 print(f"Searching for {name}'s details...")
                 city_info = get_city_info(name)
@@ -145,15 +146,16 @@ def main():
             print("-" * 70)
             print("       🌡️  CURRENT CONDITIONS")
             print("-" * 70)
-            print(f"      Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}")
-            print(f"      Humidity:        {city_info['current']['humidity']}%")
-            print(f"      Visibility:      {city_info['current']['vis_km']} km")
-            print(f"      Precipitation:   {city_info['current']['precip_mm']} mm")
-            print(f"      UV Index:        {city_info['current']['uv']}")
-            print(f"      Pressure:        {city_info['current']['pressure_mb']} mb")
-            print(f"      Dew Point:       {city_info['current']['dewpoint_c']}°C")
-            print(f"      Wind Gust:       {city_info['current']['gust_kph']} kph")
-            print("-" * 70)
+            print(f"       Wind Speed:      {city_info['current']['wind_kph']} km/h {city_info['current']['wind_dir']}")
+            print(f"       Humidity:        {city_info['current']['humidity']}%")
+            print(f"       Visibility:      {city_info['current']['vis_km']} km")
+            print(f"       Precipitation:   {city_info['current']['precip_mm']} mm")
+            print(f"       UV Index:        {city_info['current']['uv']}")
+            print(f"       Pressure:        {city_info['current']['pressure_mb']} mb")
+            print(f"       Dew Point:       {city_info['current']['dewpoint_c']}°C")
+            print(f"       Wind Gust:       {city_info['current']['gust_kph']} kph")
+            print("=" * 70)
+            print("")
 
             days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
             choice1 = ""
