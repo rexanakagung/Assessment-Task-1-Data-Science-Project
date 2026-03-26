@@ -201,13 +201,12 @@ def main():
                     print(f"        Moon Illumination: {day['astro']['moon_illumination']}%")
                     print(f"        Chance of Snow: {selected.get('daily_chance_of_snow', 0)}%")
                     print(f"        Chance of Sleet: {selected.get('daily_chance_of_sleet', 0)}%")
-                    print("-" * 70)
+                    print("=" * 70)
 
             choice2 = input("Type 'g' to see graphs or press Enter to continue: ")
             if choice2.lower() == 'g':
                 while True:
                     print("")
-                    print("-" * 70)
                     print("\n    📈 GRAPHS MENU")
                     print("-" * 70)
                     print("1.   🌡️ Hourly/Daily Temperature")
