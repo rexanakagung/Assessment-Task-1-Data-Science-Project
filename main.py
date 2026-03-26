@@ -198,17 +198,17 @@ def main():
             choice2 = input("Type 'g' to see graphs or press Enter to continue: ")
             if choice2.lower() == 'g':
                 print("\nGraphs Menu")
-                print("Hourly/Daily Temperature")
-                print("Hourly/Daily UV Index")  
-                print("Wind Speed and Gust Chart") 
+                print("1. Hourly/Daily Temperature")
+                print("2. Hourly/Daily UV Index")  
+                print("3. Wind Speed Chart") 
 
                 choice3 = input("Choose a graph to display (1-3) or press Enter to return: ") 
                 if choice3 == "1":
-                    print("Displaying temperature graph...")  # Replace with function later
+                    plot_temperature(city_info)
                 elif choice3 == "2":
-                    print("Displaying UV index graph...")  # Replace with function later
+                    plot_uv_index(city_info)  # Replace with actual function to plot UV index
                 elif choice3 == "3":
-                    print("Displaying wind speed and gust chart...")  # Replace with function later
+                    plot_wind_speed(city_info)  # Replace with actual function to plot wind speed
                 else:
                     print("Invalid choice. Returning to main menu.")
 
