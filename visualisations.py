@@ -13,4 +13,19 @@ def plot_temperature(city_info):
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
+    plt.show() 
+     
+def plot_uv_index(city_info):
+    forecast_days = city_info['forecast']['forecast_days']
+    days = [day['date'] for day in forecast_days]
+    uv_indices = [day['day']['uv'] for day in forecast_days]
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(days, uv_indices, marker='o', label='UV Index', color='purple')
+    plt.title(f"7-Day UV Index Forecast - {city_info['location']['name']}")
+    plt.xlabel('Date')
+    plt.ylabel('UV Index')
+    plt.xticks(rotation=45)
+    plt.legend()
+    plt.tight_layout()
     plt.show()
