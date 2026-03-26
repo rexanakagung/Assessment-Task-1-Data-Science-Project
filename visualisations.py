@@ -1,6 +1,14 @@
 import matplotlib.pyplot as plt
 
 
+def wait_for_return_to_graph_menu():
+    while True:
+        user_input = input("\nType 'r' to return to the Graphs Menu: ").strip().lower()
+        if user_input == 'r':
+            return
+        print("Invalid input. Try again.")
+
+
 def plot_temperature(city_info):
     forecast_days = city_info['forecast']['forecastday']
     days = [day['date'] for day in forecast_days]
@@ -18,7 +26,7 @@ def plot_temperature(city_info):
     plt.legend()
     plt.tight_layout()
     plt.show(block=False)
-    input("\nPress Enter to return to the Graphs Menu...")
+    wait_for_return_to_graph_menu()
     plt.close('all')
 
 def plot_uv_index(city_info):
@@ -35,7 +43,7 @@ def plot_uv_index(city_info):
     plt.legend()
     plt.tight_layout()
     plt.show(block=False)
-    input("\nPress Enter to return to the Graphs Menu...")
+    wait_for_return_to_graph_menu()
     plt.close('all')
 
 def plot_wind_speed(city_info):
@@ -52,5 +60,5 @@ def plot_wind_speed(city_info):
     plt.legend()
     plt.tight_layout()
     plt.show(block=False)
-    input("\nPress Enter to return to the Graphs Menu...")
+    wait_for_return_to_graph_menu()
     plt.close('all')
