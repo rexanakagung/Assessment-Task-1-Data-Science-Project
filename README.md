@@ -27,15 +27,23 @@ This project is a data‑driven weather application that retrieves real‑time w
 3. Install API Key 
  
 #### 🏃🏿 Running the App  
-Once all of this is done, run the main script: python main.py      
+Once all of this is done, run the main script on terminal: python main.py      
 You should now be able to enter a city name and receive real‑time weather information.  
-Enter a city name when prompted, and the app will display: 
+Enter a city name when prompted, and the app will display on terminal: 
 * Temparature
 * Weather conditions
 * Humidity 
 * Additional Visualisations 
  
 #### 🏛️ Project Structure 
+Assessment-Task-1-Data-Science-Project
+* main.py
+* functions.py
+* visualisations.py
+* requirements.txt
+* README.md
+* Documentation.md
+* saved_cities.json
   
 #### 📋 LICENSE
 
