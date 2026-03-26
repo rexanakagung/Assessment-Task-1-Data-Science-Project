@@ -144,6 +144,9 @@ Design application flow:
 Flowchart 
 https://excalidraw.com/#json=HluweEP8VPTabogF5HYXH,aPXsb7fV9mXIa9o2LfRQgg 
 
+Psuedocode
+
+
 Structure chart 
 https://excalidraw.com/#json=KlaS-WNRmtD-OxN4DCY61,gczbtztE4MsUn3HTL8VvrQ 
 
@@ -151,4 +154,6 @@ Gantt Chart
 https://docs.google.com/spreadsheets/d/1RGyaAHpXh_0wwzc8tRun7XxMQPgwb2P5gP19mIzfU8U/edit?usp=sharing 
  
 Data Dictionary 
-https://docs.google.com/document/d/1kKtTU3hnNmV422KWnC1RTu0Oi9Lx-eTbZperTbgYx7I/edit?usp=sharing
+https://docs.google.com/document/d/1kKtTU3hnNmV422KWnC1RTu0Oi9Lx-eTbZperTbgYx7I/edit?usp=sharing  
+
+# Maintanence
