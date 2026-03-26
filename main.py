@@ -203,11 +203,14 @@ def main():
             choice2 = input("Type 'g' to see graphs or press Enter to continue: ")
             if choice2.lower() == 'g':
                 while True:
-                    print("\nGraphs Menu")
-                    print("1. Hourly/Daily Temperature")
-                    print("2. Hourly/Daily UV Index")
-                    print("3. Wind Speed Chart")
-                    print("4. Back to Main Menu")
+                    print("-" * 70)
+                    print("\n   📈GRAPHS MENU")
+                    print("-" * 70)
+                    print("1.   🌡️Hourly/Daily Temperature")
+                    print("2.   🌞Hourly/Daily UV Index")
+                    print("3.   💨Wind Speed Chart")
+                    print("4.   🔙Back to Main Menu")
+                    print("-" * 70)
 
                     choice3 = input("Choose a graph to display (1-3) or '4' to go back: ")
                     if choice3 == "1":
