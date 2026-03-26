@@ -1,5 +1,9 @@
+import json
+
 print("Welcome to the Weather App!")
 input("Enter any letter to start: ") 
+
+SAVED_CITIES_FILE = "saved_cities.json"
  
 weather_icons = {
     "Sunny": "☀️",
@@ -29,6 +33,51 @@ weather_icons = {
     # Add more conditions as needed
 }
 
+
+def load_saved_cities():
+    try:
+        with open(SAVED_CITIES_FILE, "r", encoding="utf-8") as file:
+            data = json.load(file)
+            if isinstance(data, list):
+                return data
+    except FileNotFoundError:
+        return []
+    except json.JSONDecodeError:
+        return []
+    return []
+
+
+def save_saved_cities(cities):
+    with open(SAVED_CITIES_FILE, "w", encoding="utf-8") as file:
+        json.dump(cities, file, indent=2)
+
+
+def add_saved_city(city_name):
+    cleaned_name = city_name.strip()
+    if not cleaned_name:
+        return False
+
+    saved_cities = load_saved_cities()
+    existing = {city.lower() for city in saved_cities}
+    if cleaned_name.lower() in existing:
+        return False
+
+    saved_cities.append(cleaned_name)
+    save_saved_cities(saved_cities)
+    return True
+
+
+def show_saved_cities_menu():
+    saved_cities = load_saved_cities()
+    print("\nSaved Cities")
+    print("-" * 30)
+    if not saved_cities:
+        print("No saved cities yet.")
+        return
+
+    for index, city in enumerate(saved_cities, start=1):
+        print(f"{index}. {city}")
+
 def settings_menu():
     while True:
         print("\nSettings Menu")
@@ -42,7 +91,8 @@ def settings_menu():
         if choice == "1":
             print("Changing timezone...")  # Replace with real function later
         elif choice == "2":
-            print("Erasing saved cities...")  # Replace with real function later
+            save_saved_cities([])
+            print("Saved cities erased.")
         elif choice == "3":
             print("Changing units...")  # Replace with real function later
         elif choice == "4":
@@ -155,12 +205,26 @@ def main():
 
             days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
             choice1 = ""
-            while choice1 not in days_of_week:
-                choice1 = input("Type days from (Monday-Sunday) to see details, 's' to save, or 'exit' to return: ")
-                if choice1 == 'exit':
+            while True:
+                choice1 = input("Type a day (Monday-Sunday) to see details, 's' to save, or 'exit' to return: ").strip()
+
+                if choice1.lower() == 'exit':
                     break
-                if choice1 not in days_of_week:
-                    print("Invalid day. Please type a valid day.")
+
+                if choice1.lower() == 's':
+                    city_name = city_info['location']['name']
+                    if add_saved_city(city_name):
+                        print(f"{city_name} saved successfully.")
+                    else:
+                        print(f"{city_name} is already in saved cities.")
+                    continue
+
+                day_name = choice1.title()
+                if day_name in days_of_week:
+                    choice1 = day_name
+                    break
+
+                print("Invalid input. Try again.")
 
             if choice1 in days_of_week:
                 # find forecast entry for selected day
@@ -232,7 +296,7 @@ def main():
 
 
         elif choice == "2":
-            print("Showing saved cities...")  # Replace with function later
+            show_saved_cities_menu()
 
         elif choice == "3":
             settings_menu()  # Now opens the submenu properly
