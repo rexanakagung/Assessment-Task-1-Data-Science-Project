@@ -68,9 +68,13 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            name = input("Enter city: ")
-            print(f"Searching for {name}'s details...")
-            city_info = get_city_info(name)
+            while True:
+                name = input("Enter city: ")
+                print(f"Searching for {name}'s details...")
+                city_info = get_city_info(name)
+                if city_info:
+                    break
+                print(f"City '{name}' not found. Please try again.")
             if city_info:
                 cit = (f"City: {city_info['location']['name']}")
                 cou = (f"Country: {city_info['location']['country']}")
@@ -198,25 +202,24 @@ def main():
 
             choice2 = input("Type 'g' to see graphs or press Enter to continue: ")
             if choice2.lower() == 'g':
-                print("\nGraphs Menu")
-                print("1. Hourly/Daily Temperature")
-                print("2. Hourly/Daily UV Index")  
-                print("3. Hourly/Daily Wind Speed Chart")
-                print("4. Back to Main Menu")
-            else:
-                 print("Try Again...")
+                while True:
+                    print("\nGraphs Menu")
+                    print("1. Hourly/Daily Temperature")
+                    print("2. Hourly/Daily UV Index")
+                    print("3. Wind Speed Chart")
+                    print("4. Back to Main Menu")
 
-                choice3 = input("Choose a graph to display (1-3) or press Enter to return: ") 
-                if choice3 == "1":
-                    plot_temperature(city_info)
-                elif choice3 == "2":
-                    plot_uv_index(city_info)  # Replace with actual function to plot UV index
-                elif choice3 == "3":
-                    plot_wind_speed(city_info)  # Replace with actual function to plot wind speed
-                elif choice3 == "4":
-                    break
-                else:
-                    print("Invalid choice. Returning to main menu.")
+                    choice3 = input("Choose a graph to display (1-3) or '4' to go back: ")
+                    if choice3 == "1":
+                        plot_temperature(city_info)
+                    elif choice3 == "2":
+                        plot_uv_index(city_info)
+                    elif choice3 == "3":
+                        plot_wind_speed(city_info)
+                    elif choice3 == "4":
+                        break
+                    else:
+                        print("Invalid choice. Please try again.")
 
 
         elif choice == "2":
