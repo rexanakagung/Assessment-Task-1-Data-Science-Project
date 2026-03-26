@@ -3,7 +3,7 @@ What is your project about?
 My project is a weather application that displays real time weather data with the ability to save sessions and display reults with visualisations.
  
 ## Sucess Criteria 
-My program should be able to retreive real time weather data from my specific API and display the results with accurate visualisations. It should have a working menu system having saved sessions and the ability to change unit of measurements (e.g celcius).
+My program should be able to retreive real time weather data from my specific API and display the results with accurate visualisations. It should have a working menu system having saved sessions and the ability to change unit of measurements (e.g celcius). The application should also have the ability to let users exit the app safely and return to a previous menu without the program crashing.
 ## Functional Requirements 
 (What the system should do)
 
@@ -133,9 +133,7 @@ Design application flow:
      
 #### 6. Visuallisations Module (visualisations.py)
 * Create functions to:
-    * Line charts 
-    * Histograms
-      
+    * Line charts      
        
 #### 7. File I/O Module (file_manager.py)
 * Implement TXT export function
@@ -156,5 +154,24 @@ https://docs.google.com/spreadsheets/d/1RGyaAHpXh_0wwzc8tRun7XxMQPgwb2P5gP19mIzf
 Data Dictionary 
 https://docs.google.com/document/d/1kKtTU3hnNmV422KWnC1RTu0Oi9Lx-eTbZperTbgYx7I/edit?usp=sharing  
 
+# Development Evidence
+# Final Criteria
+After I have finished developing the weather application, it sucessfully works without any bugs or errors. It succesfully retrieves API data and parsing it into readable data formatted in an organized matter. The API data shows temperature. humidity, precipitaion, etc. Visualisations also work without any errors, the charts are accurate to the API data. Users can exit safely withou the software crashing and also handles input errors. The software allows to. store saved cities it JSON and also has a function to erase saved cities. What I didnt get to add was more variety of visualisations and a pop up app which would have improved my application by alot. Things that I could improve on is being more efficient with my coding and not reapeating code over and over again. Another thing that i could of have improved on is also removing unused variables that are not being displayed as this just makes the code look unoorganized, I could also improve my flowcharts and sturcture charts to have more detail and be more specific. Overall the development of the Weather Application has been a huge sucess.
 
 # Maintanence
+Future Improvements
+
+* Add a reusable function for forecast display to remove duplicate logic.
+* Let users delete one saved city instead of clearing all.
+* Add unit selection (C/F, kph/mph) and remember preferences. 
+
+Potential Bugs
+
+* API/network failures can return missing fields and cause key errors.
+* Date/day matching can be wrong around timezone/day changes.
+
+Maintenance Over Time
+
+* Keep dependencies pinned and update monthly.
+* Add small tests for menu input and saved city load/save flows.
+* Log API and file read/write errors for easier debugging.
