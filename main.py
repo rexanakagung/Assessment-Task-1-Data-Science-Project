@@ -55,6 +55,7 @@ def settings_menu():
 
 
 from functions import get_city_info
+from visualisations import plot_temperature, plot_uv_index, plot_wind_speed
 
 def main():
     while True:
