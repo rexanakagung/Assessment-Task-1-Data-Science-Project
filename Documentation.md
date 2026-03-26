@@ -141,16 +141,20 @@ Design application flow:
 # Design  
 Flowchart 
 https://excalidraw.com/#json=HluweEP8VPTabogF5HYXH,aPXsb7fV9mXIa9o2LfRQgg 
+<img src="Screenshot 2026-03-27 at 12.15.58 am.png" alt="Flowchart screenshot" width="50%">
 
 Psuedocode
 https://docs.google.com/document/d/1JWWwq7zsxl9fl2WqXb3yi2zimXJ4-T75tFUSd1xUPIk/edit?usp=sharing
+![alt text](<Screenshot 2026-03-27 at 12.24.36 am.png>)
 
 Structure chart 
 https://excalidraw.com/#json=KlaS-WNRmtD-OxN4DCY61,gczbtztE4MsUn3HTL8VvrQ 
+![alt text](<Screenshot 2026-03-27 at 12.26.37 am.png>)
 
 Gantt Chart 
 https://docs.google.com/spreadsheets/d/1RGyaAHpXh_0wwzc8tRun7XxMQPgwb2P5gP19mIzfU8U/edit?usp=sharing 
- 
+ ![alt text](<Screenshot 2026-03-27 at 12.28.17 am.png>)
+
 Data Dictionary 
 https://docs.google.com/document/d/1kKtTU3hnNmV422KWnC1RTu0Oi9Lx-eTbZperTbgYx7I/edit?usp=sharing  
 
