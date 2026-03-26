@@ -159,6 +159,7 @@ Data Dictionary
 https://docs.google.com/document/d/1kKtTU3hnNmV422KWnC1RTu0Oi9Lx-eTbZperTbgYx7I/edit?usp=sharing  
 
 # Development Evidence
+![alt text](<Screenshot 2026-03-27 at 12.43.11 am.png>)
 # Final Criteria
 After I have finished developing the weather application, it sucessfully works without any bugs or errors. It succesfully retrieves API data and parsing it into readable data formatted in an organized matter. The API data shows temperature. humidity, precipitaion, etc. Visualisations also work without any errors, the charts are accurate to the API data. Users can exit safely withou the software crashing and also handles input errors. The software allows to. store saved cities it JSON and also has a function to erase saved cities. What I didnt get to add was more variety of visualisations and a pop up app which would have improved my application by alot. Things that I could improve on is being more efficient with my coding and not reapeating code over and over again. Another thing that i could of have improved on is also removing unused variables that are not being displayed as this just makes the code look unoorganized, I could also improve my flowcharts and sturcture charts to have more detail and be more specific. Overall the development of the Weather Application has been a huge sucess.
 
