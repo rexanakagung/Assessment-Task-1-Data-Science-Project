@@ -201,7 +201,10 @@ def main():
                 print("\nGraphs Menu")
                 print("1. Hourly/Daily Temperature")
                 print("2. Hourly/Daily UV Index")  
-                print("3. Wind Speed Chart") 
+                print("3. Hourly/Daily Wind Speed Chart")
+                print("4. Back to Main Menu")
+            else:
+                 print("Try Again...")
 
                 choice3 = input("Choose a graph to display (1-3) or press Enter to return: ") 
                 if choice3 == "1":
@@ -210,6 +213,8 @@ def main():
                     plot_uv_index(city_info)  # Replace with actual function to plot UV index
                 elif choice3 == "3":
                     plot_wind_speed(city_info)  # Replace with actual function to plot wind speed
+                elif choice3 == "4":
+                    break
                 else:
                     print("Invalid choice. Returning to main menu.")
 
