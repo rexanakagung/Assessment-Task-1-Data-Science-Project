@@ -73,10 +73,20 @@ def show_saved_cities_menu():
     print("-" * 30)
     if not saved_cities:
         print("No saved cities yet.")
-        return
+        return None
 
     for index, city in enumerate(saved_cities, start=1):
         print(f"{index}. {city}")
+
+    while True:
+        choice = input("Type a number to load a saved city, or 'r' to return: ").strip().lower()
+        if choice == 'r':
+            return None
+        if choice.isdigit():
+            city_index = int(choice)
+            if 1 <= city_index <= len(saved_cities):
+                return saved_cities[city_index - 1]
+        print("Invalid input. Try again.")
 
 def settings_menu():
     while True:
@@ -112,16 +122,32 @@ def main():
         print("3. Settings")
         print("4. Exit")
         choice = input("Choose an option: ")
+        preselected_city = None
+
+        if choice == "2":
+            preselected_city = show_saved_cities_menu()
+            if not preselected_city:
+                continue
+            choice = "1"
 
         if choice == "1":
             while True:
                 print("")
-                name = input("Enter city: ")
+                if preselected_city:
+                    name = preselected_city
+                else:
+                    name = input("Enter city: ")
                 print(f"Searching for {name}'s details...")
                 city_info = get_city_info(name)
                 if city_info:
                     break
                 print(f"City '{name}' not found. Please try again.")
+                if preselected_city:
+                    break
+
+            if not city_info:
+                continue
+
             if city_info:
                 cit = (f"City: {city_info['location']['name']}")
                 cou = (f"Country: {city_info['location']['country']}")
@@ -205,10 +231,12 @@ def main():
 
             days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
             choice1 = ""
+            return_to_main_menu = False
             while True:
-                choice1 = input("Type a day (Monday-Sunday) to see details, 's' to save, or 'exit' to return: ").strip()
+                choice1 = input("Type a day (Monday-Sunday) to see details, 's' to save, or 'r' to return: ").strip()
 
-                if choice1.lower() == 'exit':
+                if choice1.lower() == 'r':
+                    return_to_main_menu = True
                     break
 
                 if choice1.lower() == 's':
@@ -225,6 +253,9 @@ def main():
                     break
 
                 print("Invalid input. Try again.")
+
+            if return_to_main_menu:
+                continue
 
             if choice1 in days_of_week:
                 # find forecast entry for selected day
@@ -293,10 +324,6 @@ def main():
                         break
                     else:
                         print("Invalid choice. Please try again.")
-
-
-        elif choice == "2":
-            show_saved_cities_menu()
 
         elif choice == "3":
             settings_menu()  # Now opens the submenu properly
