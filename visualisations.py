@@ -17,8 +17,10 @@ def plot_temperature(city_info):
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
-    plt.show() 
-     
+    plt.show(block=False)
+    input("\nPress Enter to return to the Graphs Menu...")
+    plt.close('all')
+
 def plot_uv_index(city_info):
     forecast_days = city_info['forecast']['forecastday']
     days = [day['date'] for day in forecast_days]
@@ -32,7 +34,9 @@ def plot_uv_index(city_info):
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
-    plt.show()
+    plt.show(block=False)
+    input("\nPress Enter to return to the Graphs Menu...")
+    plt.close('all')
 
 def plot_wind_speed(city_info):
     forecast_days = city_info['forecast']['forecastday']
@@ -47,4 +51,6 @@ def plot_wind_speed(city_info):
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
-    plt.show()
+    plt.show(block=False)
+    input("\nPress Enter to return to the Graphs Menu...")
+    plt.close('all')
